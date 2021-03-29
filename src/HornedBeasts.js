@@ -1,4 +1,5 @@
 import React from 'react';
+import { CardColumns } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card'
 
