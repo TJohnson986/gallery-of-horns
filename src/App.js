@@ -13,7 +13,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       show: false,
-      animalImage: {}
+      animalImage: {},
+      beastsToRender: data,
      }
    }
 
@@ -31,19 +32,24 @@ class App extends React.Component {
     })
   }
 
+  identifyFilteredBeasts = filteredBeasts => {
+    this.setState({beastsToRender: filteredBeasts});
+  }
+
   render() {
     return (
       <div>
         <Header />
         <FormFilter 
           animals = {data}
+          identifyFilteredBeasts = {this.identifyFilteredBeasts}
           />;
         <SelectedBeast 
           show={this.state.show}
           hideImage={this.hideImageInModal}
           animalImage={this.state.animalImage} />
         <Main 
-          animals = {data}
+          animals = {this.state.beastsToRender}
           handleClick={this.showImageInModal}
           />;
         <Footer />
