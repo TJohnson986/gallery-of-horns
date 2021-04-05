@@ -39,6 +39,7 @@ class HornedBeasts extends React.Component {
         <Card.Title>{this.props.title}</Card.Title>
         <Card.Text>
         {this.props.description}
+        <div>{this.props.horns} horns</div>
         <div>🖤{this.state.numberOfHearts} </div>
         <Button onClick={this.buttonClicked} variant="Primary" size="lg" className="button">This is my fav!</Button>
         </Card.Text>
