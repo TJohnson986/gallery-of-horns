@@ -44,10 +44,10 @@ class App extends React.Component {
           animals = {data}
           identifyFilteredBeasts = {this.identifyFilteredBeasts}
           />
-        {/* <SelectedBeast 
+        <SelectedBeast 
           show={this.state.show}
           hideImage={this.hideImageInModal}
-          animalImage={this.state.animalImage} /> */}
+          animalImage={this.state.animalImage} />
         <Main 
           animals = {this.state.beastsToRender}
           handleClick={this.showImageInModal}
