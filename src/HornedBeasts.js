@@ -15,12 +15,25 @@ class HornedBeasts extends React.Component {
     this.setState({
       numberOfHearts: this.state.numberOfHearts + 1
     });
+    this.props.handleClick({
+      title: this.props.title,
+      description: this.props.description,
+      image_url: this.props.image_url
+    })
+  }
+
+  cardClicked = () => {
+    this.props.handleClick({
+      title: this.props.title,
+      description: this.props.description,
+      image_url: this.props.image_url
+    })
   }
 
   render() {
     return (
       <>
-      <Card>
+      <Card onClick={this.cardClicked}>
       <Card.Img variant="top" src={this.props.image_url} />
       <Card.Body>
         <Card.Title>{this.props.title}</Card.Title>
